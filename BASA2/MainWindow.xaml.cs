@@ -73,5 +73,54 @@ namespace BASA2
             DragMove();
         }
 
+        private void Button_Login_Click(object sender, RoutedEventArgs e)
+        {
+            string name = TextBoxNameUser.Text;
+            string password = TexTBoxPassword.Password;
+
+            if (name.Length < 4)
+            {
+                TextBoxNameUser.ToolTip = "Мінімум 4 символи";
+                TextBoxNameUser.Background = Brushes.IndianRed;
+            }
+            else if (password.Length < 6)
+            {
+                TexTBoxPassword.ToolTip = "Мінімум 6 символів";
+                TexTBoxPassword.Background = Brushes.IndianRed;
+            }
+            else
+            {
+                TextBoxNameUser.ToolTip = "";
+                TextBoxNameUser.Background = Brushes.Transparent;
+
+                TexTBoxPassword.ToolTip = "";
+                TexTBoxPassword.Background = Brushes.Transparent;
+
+
+                User AuthUser = null;
+                using (AppContext db = new AppContext())
+                {
+                    AuthUser = db.Users.Where(b => b.Name == name && b.Password == password).FirstOrDefault();
+                }
+                if (AuthUser != null)
+                {
+
+                    MasterWindow masterWindow = new MasterWindow();
+                    masterWindow.Show();
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Введено не коректно дані");
+                }
+            }
+        }
+
+        private void Button_add_new_account_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterWindow registerWindow = new RegisterWindow();
+            registerWindow.Show();
+            Hide();
+        }
     }
 }

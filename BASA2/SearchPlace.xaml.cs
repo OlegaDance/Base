@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace BASA2
 {
     /// <summary>
-    /// Логика взаимодействия для SearchPlace.xaml
+    /// Interaction logic for SearchPlace.xaml
     /// </summary>
     public partial class SearchPlace : Page
     {

@@ -25,7 +25,7 @@
                     <ListView Margin="0 15" BorderBrush="DarkGray" BorderThickness="2" Cursor="">
                         <ListViewItem HorizontalAlignment="Center" Margin="0 ">
                             <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
-                                    HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black"  >
+                                    HorizontalAlignment="Left" Click="Button_Click_searchplace" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black"  >
                                 <StackPanel Margin="-5">
                                     <materialDesign:PackIcon Kind="Home"/>
                                 </StackPanel>
@@ -41,7 +41,7 @@
                         </ListViewItem>
                         <ListViewItem HorizontalAlignment="Center" Margin="0 ">
                             <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
-                                    HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="MyProfile">
+                                    HorizontalAlignment="Left" Click="myprofileTxT_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="MyProfile">
                                 <StackPanel Margin="-5">
                                     <materialDesign:PackIcon Kind="User"/>
                                 </StackPanel>

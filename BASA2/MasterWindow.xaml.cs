@@ -50,6 +50,14 @@ namespace BASA2
             }
             paletteHelper.SetTheme(theme);
         }
+        private void myprofileTxT_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Content = new MyProfile();
+        }
+        private void Button_Click_searchplace(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Content = new SearchPlace();
+        }
     }
 }
     

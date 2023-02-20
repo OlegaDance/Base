@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace BASA2
 {
     /// <summary>
-    /// Логика взаимодействия для MyProfile.xaml
+    /// Interaction logic for MyProfile.xaml
     /// </summary>
     public partial class MyProfile : Page
     {

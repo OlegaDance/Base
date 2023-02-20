@@ -4,11 +4,33 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BASA2"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="SearchPlace">
+      Title="SerchPlace" Background="White">
 
-    <Grid>
-        
+    <Grid  >
+
+        <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+           HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black"  Margin="0,0,0,660" Height="50" Width="50" >
+            <materialDesign:PackIcon Kind="Search" Height="50" Width="50"/>
+        </Button>
+
+        <StackPanel >
+            <TextBox x:Name="SearchBox"  Margin="0 15 1000 0"  Grid.Column="0" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="14"
+         materialDesign:HintAssist.Hint=" Пошук" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="45" Width="150" />
+        </StackPanel>
+        <ListView x:Name="ProductsList" Margin="100" >
+            <ListView.View>
+                <GridView >
+                    <GridViewColumn Header="Назва" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Ціна за 10кг" DisplayMemberBinding="{Binding Price}" />
+                    <GridViewColumn Header="Кількість" DisplayMemberBinding="{Binding amount}" />
+                    <GridViewColumn Header="Сорт" DisplayMemberBinding="{Binding sort}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
     </Grid>
 </Page>

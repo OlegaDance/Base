@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\MrKyg\source\repos\BASA2\BASA2\obj\Debug\
+C:\Users\vovab\Source\Repos\Base\BASA2\obj\Debug\
 BASA2
 none
 false
 DEBUG;TRACE
-C:\Users\MrKyg\source\repos\BASA2\BASA2\App.xaml
-3-1803266164
+C:\Users\vovab\Source\Repos\Base\BASA2\App.xaml
+5-1524594272
 
-779527630
-161232343313
-MainWindow.xaml;MasterWindow.xaml;RegisterWindow.xaml;
+11457276269
+22-1754695684
+MainWindow.xaml;MasterWindow.xaml;MyProfile.xaml;RegisterWindow.xaml;SearchPlace.xaml;
 
-True
+False
 
