@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="AdminWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Назва товару:" Grid.Row="0" Grid.Column="0" Margin="5"/>
+        <TextBox x:Name="ProductNameTextBox" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Кількість:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+        <TextBox x:Name="ProductquantityTextBox" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Ціна товару:" Grid.Row="2" Grid.Column="0" Margin="5"/>
+        <TextBox x:Name="PriceTextBox" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Сорт:" Grid.Row="3" Grid.Column="0" Margin="5"/>
+        <TextBox x:Name="SortTextBox" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+        <Button Content="Додати товар" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Click="AddToCart_Click"/>
     </Grid>
 </Window>
