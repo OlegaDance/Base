@@ -6,30 +6,22 @@
       xmlns:local="clr-namespace:BASA2"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="800"  
       Title="SerchPlace" Background="White">
-
-    <Grid Margin="0,0,0,0"  >
-
+    <Grid Margin="0,0,0,0" >
         <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
            HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black"  Margin="0,0,0,660" Height="50" Width="50" >
             <materialDesign:PackIcon Kind="Search" Height="50" Width="50"/>
         </Button>
-
         <StackPanel >
             <TextBox x:Name="SearchBox"  Margin="0 15 1000 0"  Grid.Column="0" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="14"
          materialDesign:HintAssist.Hint=" Пошук" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="45" Width="150" />
         </StackPanel>
-       
-
-
-            <TextBlock Text="Назва" Margin="120,80,0,0"/>
-        <TextBlock Text="Сорт" Margin="190,80,0,0" />
-        <TextBlock Text="Ціна" Margin="250,80,0,0"/>
-            <TextBlock Text="Кількість" Margin="290,80,0,0"/>
-
-            <ListBox Margin="100,100,15,26" x:Name="Goods"/>
-
-       
+        <TextBlock Text="Назва" Margin="120,80,0,0" FontSize="15" FontWeight="SemiBold"/>
+        <TextBlock Text="Сорт" Margin="190,80,0,0" FontSize="15" FontWeight="SemiBold"/>
+        <TextBlock Text="Ціна" Margin="250,80,0,0" FontSize="15" FontWeight="SemiBold" />
+        <TextBlock Text="Кількість" Margin="300,80,0,0" FontSize="15" FontWeight="SemiBold" />
+        <ListBox Margin="100,100,423,25" x:Name="Goods"/>
+        <Rectangle Margin="100 100 100 25"  materialDesign:ShadowAssist.Darken="True" StrokeThickness="2" Stroke="Black"/>
     </Grid>
 </Page>

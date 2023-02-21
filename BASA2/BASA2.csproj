@@ -91,6 +91,9 @@
     <Compile Include="AuthWinwowAdmin.xaml.cs">
       <DependentUpon>AuthWinwowAdmin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Loading.xaml.cs">
+      <DependentUpon>Loading.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MasterWindow.xaml.cs">
       <DependentUpon>MasterWindow.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AuthWinwowAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Loading.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

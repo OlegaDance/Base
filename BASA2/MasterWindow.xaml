@@ -13,7 +13,7 @@
             <Grid >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="17*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.Resources>
                     <Style TargetType="materialDesign:PackIcon">
@@ -22,16 +22,23 @@
                     </Style>
                 </Grid.Resources>
                 <Grid Background="GhostWhite" Grid.Column="0">
-                    <ListView Margin="0 15" BorderBrush="DarkGray" BorderThickness="2" Cursor="">
+                    <ListView Margin="0">
                         <ListViewItem HorizontalAlignment="Center" Margin="0 ">
+                            <materialDesign:PackIcon Height="100" Width="50" Kind="Apple" Foreground="#A4F43D"/>
+                        </ListViewItem>
+                    </ListView>
+                    <ListView Margin="0 250" BorderBrush="DarkGray" BorderThickness="2" Cursor="">
+                        <ListViewItem HorizontalAlignment="Left" Margin="0 ">
                             <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
                                     HorizontalAlignment="Left" Click="Button_Click_searchplace" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black"  >
                                 <StackPanel Margin="-5">
-                                    <materialDesign:PackIcon Kind="Home"/>
+                                    
+                                    <materialDesign:PackIcon Kind="Search"/>
+                                    
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-                        <ListViewItem HorizontalAlignment="Center" Margin="0 ">
+                        <ListViewItem HorizontalAlignment="Left" Margin="0 ">
                             <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
                                     HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black">
                                 <StackPanel Margin="-5">
@@ -39,7 +46,7 @@
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-                        <ListViewItem HorizontalAlignment="Center" Margin="0 ">
+                        <ListViewItem HorizontalAlignment="Left" Margin="0 ">
                             <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
                                     HorizontalAlignment="Left" Click="myprofileTxT_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="MyProfile">
                                 <StackPanel Margin="-5">
@@ -47,27 +54,13 @@
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-
-
-                        <ListViewItem HorizontalAlignment="Center" Margin="0 ">
-                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
-                                    HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="ThemToogle_Click">
-                                <StackPanel Margin="-5">
-                                    <materialDesign:PackIcon Kind="MoonAndStars"/>
-                                </StackPanel>
-                            </Button>
-                        </ListViewItem>
-
                     </ListView>
                 </Grid>
                 <Grid Grid.Column="1">
-
                 </Grid>
             </Grid>
-
         </materialDesign:Card>
-        <Frame x:Name="MyFrame" Margin="70,0,0,0">
-
+        <Frame x:Name="MyFrame" Margin="89,0,0,0">
         </Frame>
     </Grid>
 </Window>

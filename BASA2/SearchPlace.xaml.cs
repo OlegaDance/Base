@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,5 +29,6 @@ namespace BASA2
             Goods.DataContext= bd.Products.ToList();
             Goods.ItemsSource = bd.Products.ToList();
         }
+       
     }
 }
