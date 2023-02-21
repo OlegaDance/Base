@@ -23,6 +23,10 @@ namespace BASA2
         public SearchPlace()
         {
             InitializeComponent();
+
+            ProductsContext bd = new ProductsContext();
+            Goods.DataContext= bd.Products.ToList();
+            Goods.ItemsSource = bd.Products.ToList();
         }
     }
 }

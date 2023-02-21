@@ -46,6 +46,10 @@ namespace BASA2
             this.price= price;
             this.count= count;
         }
+        public override string ToString()
+        {
+            return $" {name}   {sort}   {price}   {count}";
+        }
 
 
     }

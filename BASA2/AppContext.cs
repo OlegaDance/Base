@@ -18,6 +18,7 @@ namespace BASA2
     {
         public DbSet<Product> Products { get; set; }
         public ProductsContext() : base("ProductsConnection") { }
+
     }
  
 }
