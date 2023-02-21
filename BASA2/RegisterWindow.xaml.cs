@@ -24,11 +24,13 @@ namespace BASA2
     {
 
         AppContext db;
+        
         public RegisterWindow()
         {
             InitializeComponent();
 
             db = new AppContext();
+           
         }
         public bool IsDarkTheme { get; set; }
         private readonly PaletteHelper paletteHelper = new PaletteHelper();
@@ -87,6 +89,7 @@ namespace BASA2
             string name = TextBoxUserName.Text;
             string password = TextBoxPassword.Password;
 
+            
 
             if (name.Length < 4)
             {
@@ -95,10 +98,11 @@ namespace BASA2
             }
             else if (password.Length < 6)
             {
-               TextBoxPassword.ToolTip = "Мінімум 6 символів";
+                TextBoxPassword.ToolTip = "Мінімум 6 символів";
                 TextBoxPassword.Background = Brushes.IndianRed;
-            }
-            else
+            } 
+            
+            else 
             {
                 TextBoxUserName.ToolTip = "";
                 TextBoxUserName.Background = Brushes.Transparent;
@@ -110,11 +114,13 @@ namespace BASA2
                 db.Users.Add(user);
                 db.SaveChanges();
 
-
-                MainWindow authWindow = new MainWindow();
+            MainWindow authWindow = new MainWindow();
                 authWindow.Show();
                 Hide();
             }
+            
+          
+            
         }
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace BASA2
 {
@@ -19,9 +20,32 @@ namespace BASA2
     /// </summary>
     public partial class AdminWindow : Window
     {
+
+        ProductsContext bd;
         public AdminWindow()
         {
             InitializeComponent();
+            bd = new ProductsContext();
+        }
+
+        private void AddToCart_Click(object sender, RoutedEventArgs e)
+        {
+            string name = ProductNameTextBox.Text;
+            string sort = SortTextBox.Text;
+            string price= PriceTextBox.Text;
+            string count = ProductquantityTextBox.Text;
+           
+
+            Product product = new Product(name, sort, price, count);
+            bd.Products.Add(product);
+            bd.SaveChanges();
+        }
+
+        private void BackToAuth_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Hide();
         }
     }
 }

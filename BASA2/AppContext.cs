@@ -13,4 +13,11 @@ namespace BASA2
         public AppContext() : base("DefaultConnection") { }
 
     }
+
+    internal class ProductsContext : DbContext
+    {
+        public DbSet<Product> Products { get; set; }
+        public ProductsContext() : base("ProductsConnection") { }
+    }
+ 
 }

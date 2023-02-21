@@ -112,7 +112,6 @@ C:\Users\MrKyg\Source\Repos\Base\BASA2\obj\Debug\BASA2.csproj.CoreCompileInputs.
 C:\Users\MrKyg\Source\Repos\Base\BASA2\obj\Debug\BASA2.csproj.CopyComplete
 C:\Users\MrKyg\Source\Repos\Base\BASA2\obj\Debug\BASA2.exe
 C:\Users\MrKyg\Source\Repos\Base\BASA2\obj\Debug\BASA2.pdb
-C:\Users\vovab\Base\BASA2\bin\Debug\Basa.db
 C:\Users\vovab\Base\BASA2\bin\Debug\BASA2.exe.config
 C:\Users\vovab\Base\BASA2\bin\Debug\BASA2.exe
 C:\Users\vovab\Base\BASA2\bin\Debug\BASA2.pdb
@@ -155,3 +154,9 @@ C:\Users\vovab\Base\BASA2\obj\Debug\BASA2.csproj.CoreCompileInputs.cache
 C:\Users\vovab\Base\BASA2\obj\Debug\BASA2.csproj.CopyComplete
 C:\Users\vovab\Base\BASA2\obj\Debug\BASA2.exe
 C:\Users\vovab\Base\BASA2\obj\Debug\BASA2.pdb
+C:\Users\vovab\Base\BASA2\obj\Debug\AdminWindow.g.cs
+C:\Users\vovab\Base\BASA2\obj\Debug\AdminWindow.baml
+C:\Users\vovab\Base\BASA2\bin\Debug\Data Base\Basa.db
+C:\Users\vovab\Base\BASA2\bin\Debug\Data Base\Basa2.db
+C:\Users\vovab\Base\BASA2\obj\Debug\AuthWinwowAdmin.g.cs
+C:\Users\vovab\Base\BASA2\obj\Debug\AuthWinwowAdmin.baml

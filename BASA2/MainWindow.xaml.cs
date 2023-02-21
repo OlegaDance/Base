@@ -1,6 +1,7 @@
 ﻿using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,6 +79,9 @@ namespace BASA2
             string name = TextBoxNameUser.Text;
             string password = TexTBoxPassword.Password;
 
+
+           
+
             if (name.Length < 4)
             {
                 TextBoxNameUser.ToolTip = "Мінімум 4 символи";
@@ -98,10 +102,13 @@ namespace BASA2
 
 
                 User AuthUser = null;
+               
+
                 using (AppContext db = new AppContext())
                 {
                     AuthUser = db.Users.Where(b => b.Name == name && b.Password == password).FirstOrDefault();
                 }
+              
                 if (AuthUser != null)
                 {
 
@@ -109,10 +116,13 @@ namespace BASA2
                     masterWindow.Show();
                     Hide();
                 }
+               
                 else
                 {
-                    MessageBox.Show("Введено не коректно дані");
+                    MessageBox.Show("Щось пішло не так!");
                 }
+
+               
             }
         }
 
@@ -121,6 +131,14 @@ namespace BASA2
             RegisterWindow registerWindow = new RegisterWindow();
             registerWindow.Show();
             Hide();
+        }
+
+        private void btn_Admin_Click(object sender, RoutedEventArgs e)
+        {
+            AuthWinwowAdmin authWinwowAdmin = new AuthWinwowAdmin();
+            authWinwowAdmin.Show();
+            Hide();
+
         }
     }
 }
