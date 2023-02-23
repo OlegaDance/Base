@@ -46,7 +46,57 @@ namespace BASA2
 
 
         }
-       
+
+        private void Order_the_goods_Click(object sender, RoutedEventArgs e)
+        {
+
+            OrderGoods orderGoods = new OrderGoods();
+           
+             // Отримуємо значення з TextBox
+            int count = int.Parse(TextBoxCountEnter.Text);
+            decimal price = decimal.Parse(TextBoxPriceEnter.Text);
+
+            if (!int.TryParse(TextBoxCountEnter.Text, out count))
+            {
+                MessageBox.Show("Некоректна кількість товару!");
+                return;
+            }
+
+            if (!decimal.TryParse(TextBoxPriceEnter.Text, out price))
+            {
+                MessageBox.Show("Некоректна ціна товару!");
+                return;
+            }
+
+            // Обчислюємо вартість
+            decimal total = count * price;
+
+            orderGoods = SetPriceAndCount(total);
+           
+
+
+
+            // отримання тексту з textBlock1
+            string text = SampleText.Text;
+
+            // відкриваємо нове вікно
+
+
+            // передаємо текст у друге вікно
+            orderGoods.SetText(text);
+            orderGoods.ShowDialog();
+
+
+        }
+        public OrderGoods  SetPriceAndCount(decimal total)
+        {
+            OrderGoods orderGoods = new OrderGoods();
+            orderGoods.FormulaTextBlockCountAndPrice.Text = total.ToString();
+            return orderGoods;
+            
+        }
+
+
     }
 }
     
