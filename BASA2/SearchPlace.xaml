@@ -21,8 +21,15 @@
         <TextBlock Text="Сорт" Margin="190,80,0,0" FontSize="15" FontWeight="SemiBold"/>
         <TextBlock Text="Ціна" Margin="250,80,0,0" FontSize="15" FontWeight="SemiBold" />
         <TextBlock Text="Кількість" Margin="300,80,0,0" FontSize="15" FontWeight="SemiBold" />
-        <ListBox Margin="100,100,423,25" x:Name="Goods" SelectionChanged="Goods_SelectionChanged" />
-        <Rectangle Margin="100 100 100 25"  materialDesign:ShadowAssist.Darken="True" StrokeThickness="2" Stroke="Gray" />
-        <TextBlock x:Name="SampleText" HorizontalAlignment="Left" Margin="726,329,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <ListBox Margin="100,100,423,25" HorizontalAlignment="Left" x:Name="Goods" SelectionChanged="Goods_SelectionChanged" />
+        <StackPanel>
+            <TextBlock FontSize="22" x:Name="SampleText" HorizontalAlignment="Right" Margin="90 100 10 50" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center"/>
+            <TextBlock  HorizontalAlignment="Right" x:Name="Textmain" Margin="15" FontSize="17" FontWeight="SemiBold"  Text="Уведіть скільки вам потрібно"/>
+            <TextBox HorizontalAlignment="Right" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="15" x:Name="TextBoxNameUser" Width="200" Height="50" FontSize="12"
+                         materialDesign:HintAssist.Hint="Введіть псевдонім"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"  />
+            <Button Margin="15" x:Name="Order_the_goods" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" HorizontalAlignment="Right" Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" 
+                        FontSize="18" Content="Замовити"/>
+        </StackPanel>
     </Grid>
 </Page>

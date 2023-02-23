@@ -58,10 +58,7 @@ namespace BASA2
         {
             MyFrame.Content = new SearchPlace();
         }
-        private void Button_Click_Cart(object sender, RoutedEventArgs e)
-        {
-            MyFrame.Content = new ShoppingCartWindow();
-        }
+      
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

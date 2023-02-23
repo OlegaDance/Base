@@ -34,7 +34,6 @@ namespace BASA2
         private void Goods_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-            ShoppingCartWindow shoppingCartWindow = new ShoppingCartWindow();
 
 
             Goods.SelectionChanged += Goods_SelectionChanged;

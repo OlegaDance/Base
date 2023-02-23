@@ -41,7 +41,7 @@
                     <Label x:Name="LabelName1">
                         <TextBox BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="70 50 0 0" x:Name="TextBoxNameUser" Width="300" FontSize="18"
                          materialDesign:HintAssist.Hint="Введіть псевдонім"
-                         Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}" TextChanged="TextBoxNameUser_TextChanged" />
                     </Label>
                     <Label x:Name="LabelName2">
                         <PasswordBox Margin="70 20 0 0" x:Name="TexTBoxPassword" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Введіть пароль" BorderThickness="2" 

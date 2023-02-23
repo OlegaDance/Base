@@ -140,5 +140,10 @@ namespace BASA2
             Hide();
 
         }
+
+        private void TextBoxNameUser_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
