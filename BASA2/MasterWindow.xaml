@@ -24,7 +24,7 @@
                 <Grid Background="GhostWhite" Grid.Column="0">
                     <ListView Margin="0">
                         <ListViewItem HorizontalAlignment="Center" Margin="0 ">
-                            <materialDesign:PackIcon Height="100" Width="50" Kind="Apple" Foreground="#A4F43D"/>
+                            <materialDesign:PackIcon Height="100" Width="50" Kind="FoodApple"  Foreground="#A4F43D"/>
                         </ListViewItem>
                     </ListView>
                     <ListView Margin="0 250" BorderBrush="DarkGray" BorderThickness="2" Cursor="">
@@ -33,7 +33,7 @@
                                     HorizontalAlignment="Left" Click="Button_Click_searchplace" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black"  >
                                 <StackPanel Margin="-5">
                                     
-                                    <materialDesign:PackIcon Kind="Search"/>
+                                    <materialDesign:PackIcon Kind="Home"/>
                                     
                                 </StackPanel>
                             </Button>

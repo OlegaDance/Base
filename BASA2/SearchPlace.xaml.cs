@@ -25,10 +25,29 @@ namespace BASA2
         {
             InitializeComponent();
 
+            Goods.Items.Clear();
             ProductsContext bd = new ProductsContext();
-            Goods.DataContext= bd.Products.ToList();
+            Goods.DataContext = bd.Products.ToList();
             Goods.ItemsSource = bd.Products.ToList();
+        }
+
+        private void Goods_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            ShoppingCartWindow shoppingCartWindow = new ShoppingCartWindow();
+
+
+            Goods.SelectionChanged += Goods_SelectionChanged;
+            // Отримати обраний елемент
+            var selectedItem = Goods.SelectedItem;
+            // Виконати потрібні дії з отриманою інформацією
+            // Наприклад, вивести вміст обраного елементу в TextBox
+            SampleText.Text = selectedItem.ToString();
+
+
+
         }
        
     }
 }
+    

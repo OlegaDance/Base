@@ -21,7 +21,8 @@
         <TextBlock Text="Сорт" Margin="190,80,0,0" FontSize="15" FontWeight="SemiBold"/>
         <TextBlock Text="Ціна" Margin="250,80,0,0" FontSize="15" FontWeight="SemiBold" />
         <TextBlock Text="Кількість" Margin="300,80,0,0" FontSize="15" FontWeight="SemiBold" />
-        <ListBox Margin="100,100,423,25" x:Name="Goods"  />
+        <ListBox Margin="100,100,423,25" x:Name="Goods" SelectionChanged="Goods_SelectionChanged" />
         <Rectangle Margin="100 100 100 25"  materialDesign:ShadowAssist.Darken="True" StrokeThickness="2" Stroke="Gray" />
+        <TextBlock x:Name="SampleText" HorizontalAlignment="Left" Margin="726,329,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
     </Grid>
 </Page>
