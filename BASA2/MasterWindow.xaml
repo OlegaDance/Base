@@ -40,7 +40,7 @@
                         </ListViewItem>
                         <ListViewItem HorizontalAlignment="Left" Margin="0 ">
                             <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
-                                    HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black">
+                                    HorizontalAlignment="Left" Click="Button_Click_Cart" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black">
                                 <StackPanel Margin="-5">
                                     <materialDesign:PackIcon Kind="Cart"/>
                                 </StackPanel>

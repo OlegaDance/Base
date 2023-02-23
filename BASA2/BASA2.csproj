@@ -107,6 +107,9 @@
     <Compile Include="SearchPlace.xaml.cs">
       <DependentUpon>SearchPlace.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ShoppingCartWindow.xaml.cs">
+      <DependentUpon>ShoppingCartWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Page Include="AdminWindow.xaml">
       <SubType>Designer</SubType>
@@ -145,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SearchPlace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShoppingCartWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

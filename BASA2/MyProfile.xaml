@@ -7,20 +7,21 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MyProfile" FontFamily="Roboto" >
-    <ScrollViewer>
-        <Grid Background="White">
-            <Grid x:Name="print" HorizontalAlignment="Center">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="120"/>
-                    <RowDefinition Height="400"/>
-                    <RowDefinition Height="200"/>
-                </Grid.RowDefinitions>
-                <StackPanel Orientation="Horizontal" Margin="130 30 130 30" Grid.Row="0">
-                    <materialDesign:PackIcon Kind="User" Margin="0 0 0 0" Width="100" Height="59"/>
-                    <TextBlock Margin="0 11 0 0" Text="Ваш Профіль " FontSize="35" Foreground="DarkGray" FontWeight="SemiBold"/>
-                </StackPanel>
-            </Grid>
-        </Grid>
-    </ScrollViewer>
+      Title="MyProfile" FontFamily="Roboto" Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="500" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition  Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Background="White"  >
+            <materialDesign:PackIcon Kind="User" HorizontalAlignment="Center" Margin="30 -10 0 5" Height="68" Width="50" Foreground="Black" />
+            <TextBlock Text="Мій Профіль" FontSize="44" />
+
+
+        </StackPanel>
+    </Grid>
 </Page>

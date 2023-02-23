@@ -210,3 +210,5 @@ C:\Users\MrKyg\Base\BASA2\obj\Debug\BASA2.exe
 C:\Users\MrKyg\Base\BASA2\obj\Debug\BASA2.pdb
 C:\Users\MrKyg\Base\BASA2\obj\Debug\Loading.baml
 C:\Users\MrKyg\Base\BASA2\obj\Debug\Loading.g.cs
+C:\Users\MrKyg\Base\BASA2\obj\Debug\ShoppingCartWindow.g.cs
+C:\Users\MrKyg\Base\BASA2\obj\Debug\ShoppingCartWindow.baml
