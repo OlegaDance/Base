@@ -1,14 +1,37 @@
-﻿<Window x:Class="BASA2.OrderGoods"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BASA2"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="BASA2.OrderGoods"
         mc:Ignorable="d"
-        Title="OrderGoods" Height="450" Width="800" WindowStyle="ToolWindow">
+        Title="OrderGoods" Height="600" Width="900" WindowStyle="ToolWindow">
     <Grid>
-        <TextBlock x:Name="GoodsTextBlock" HorizontalAlignment="Left" Margin="212,130,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock x:Name="FormulaTextBlockCountAndPrice" HorizontalAlignment="Left" Margin="237,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="w"/>
+        <TextBlock x:Name="GoodsTextBlock" HorizontalAlignment="Left" Margin="55,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        
+        <TextBlock x:Name="FormulaTextBlockCountAndPrice" HorizontalAlignment="Left" Margin="55,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+       
+        <CheckBox x:Name="CheckBoxPay" Content="Оплата при отриманні" HorizontalAlignment="Left" Margin="267,121,0,0" VerticalAlignment="Top" Checked="CheckBoxPay_Checked_1" />
+        <CheckBox x:Name="CheckBoxdelivery" Content="Доставка кур'єром" HorizontalAlignment="Left" Margin="675,124,0,0" VerticalAlignment="Top" Checked="CheckBoxdelivery_Checked"/>
+        <CheckBox x:Name="CheckBoxSelfPickup" Content="Самовивіз" HorizontalAlignment="Left" Margin="502,124,0,0" VerticalAlignment="Top" Checked="CheckBoxSelfPickup_Checked"  />
+           
+        <TextBox  Margin="675,179,75,330" x:Name="TextBoxSurnameUser" FontSize="12" Width="150" Height="65"
+        materialDesign:HintAssist.Hint="Введіть прізвище"
+         />
+        <TextBox  Margin="675,259,75,250" x:Name="TextBoxNameUser" FontSize="12" Width="150" Height="65"
+            materialDesign:HintAssist.Hint="Введіть ім'я"
+           />
+        <TextBox  Margin="675,339,75,170" x:Name="TextBoxNumberPhoneUser" FontSize="12" Width="150" Height="65"
+            materialDesign:HintAssist.Hint="Введіть номер телефону"
+             />
+        <TextBox  Margin="675,419,75,90" x:Name="TextBoxCityUser" FontSize="12" Width="150" Height="65"
+            materialDesign:HintAssist.Hint="Введіть місто"
+              />
+        <TextBox Margin="675,499,75,10" x:Name="TextBoxStreetUser" FontSize="12" Width="150" Height="65"
+            materialDesign:HintAssist.Hint="Введіть №буд.та вул."
+            />
+        <Button x:Name="ConfirmEnter" Content="Підтвердити" HorizontalAlignment="Center" Margin="0,504,0,0" VerticalAlignment="Top" Click="ConfirmEnter_Click"/>
 
     </Grid>
 </Window>

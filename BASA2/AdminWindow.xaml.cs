@@ -22,10 +22,17 @@ namespace BASA2
     {
 
         ProductsContext bd;
+
+       
         public AdminWindow()
         {
             InitializeComponent();
             bd = new ProductsContext();
+
+            ListBoxZamovlenna.Items.Clear();
+            OrderContext BD = new OrderContext();
+            ListBoxZamovlenna.DataContext = BD.Orders.ToList();
+            ListBoxZamovlenna.ItemsSource = BD.Orders.ToList();
         }
 
         private void AddToCart_Click(object sender, RoutedEventArgs e)

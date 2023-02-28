@@ -20,5 +20,12 @@ namespace BASA2
         public ProductsContext() : base("ProductsConnection") { }
 
     }
+
+    internal class OrderContext : DbContext
+    {
+        public DbSet<Order> Orders { get; set; }
+
+        public OrderContext(): base("OrderConnection") { }
+    }
  
 }
