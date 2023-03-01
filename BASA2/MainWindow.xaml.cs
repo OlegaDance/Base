@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,6 +26,7 @@ namespace BASA2
         public MainWindow()
         {
             InitializeComponent();
+         
         }
         public bool IsDarkTheme { get; set; }
         public static System.Windows.Media.Color ControlLightColor { get; }
@@ -115,6 +117,10 @@ namespace BASA2
                     MasterWindow masterWindow = new MasterWindow();
                     masterWindow.Show();
                     Hide();
+
+
+                    
+
                 }
                
                 else
@@ -122,7 +128,15 @@ namespace BASA2
                     MessageBox.Show("Щось пішло не так!");
                 }
 
-               
+             
+
+
+
+
+
+
+
+
             }
         }
 

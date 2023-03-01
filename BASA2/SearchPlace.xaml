@@ -9,9 +9,9 @@
       d:DesignHeight="450" d:DesignWidth="800"  
       Title="SerchPlace" Background="White">
     <Grid Margin="0,0,0,0" >
-        <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+        <Button x:Name="ButtonSearch" Click="ButtonSearch_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
            HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black"  Margin="0,0,0,660" Height="50" Width="50" >
-            <materialDesign:PackIcon Kind="Search" Height="50" Width="50"/>
+            <materialDesign:PackIcon Kind="Search" Height="50" Width="50" />
         </Button>
         <StackPanel >
             <TextBox x:Name="SearchBox"  Margin="0 15 890 0"  Grid.Column="0" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" FontSize="14"
@@ -23,7 +23,7 @@
         <TextBlock Text="Кількість" Margin="300,80,0,0" FontSize="15" FontWeight="SemiBold" />
         <ListBox Margin="100,100,423,25" HorizontalAlignment="Left" x:Name="Goods" SelectionChanged="Goods_SelectionChanged" />
         <StackPanel>
-            <TextBlock FontSize="22" x:Name="SampleText" HorizontalAlignment="Right" Margin="90 100 10 50" TextWrapping="Wrap"  Text="re" Width="145"/>
+            <TextBlock FontSize="22" x:Name="SampleText" HorizontalAlignment="Right" Margin="90 100 10 50" TextWrapping="Wrap" Width="145"/>
             <TextBox HorizontalAlignment="Right" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="15" x:Name="TextBoxCountEnter" Width="200" Height="50" FontSize="12"
                          materialDesign:HintAssist.Hint="Введіть кількість"
                          Style="{StaticResource MaterialDesignOutlinedTextBox}"  />

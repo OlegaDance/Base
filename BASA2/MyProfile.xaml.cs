@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Controls.Primitives;
 
 namespace BASA2
 {
@@ -23,6 +24,23 @@ namespace BASA2
         public MyProfile()
         {
             InitializeComponent();
+            ListBoxMyProfile.Items.Clear();
+            AppContext db = new AppContext();
+            ListBoxMyProfile.DataContext = db.Users.ToList();
+            ListBoxMyProfile.ItemsSource = db.Users.ToList();
+           
+        }
+
+
+        
+        private void ListBoxMyProfile_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+
+            ListBoxMyProfile.SelectionChanged += ListBoxMyProfile_SelectionChanged;
+            var selectedItem = ListBoxMyProfile.SelectedItem;
+
+          
         }
     }
 }

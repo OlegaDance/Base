@@ -118,7 +118,9 @@ namespace BASA2
                 authWindow.Show();
                 Hide();
             }
-            
+            User user1 = new User(name, password);
+            user1 = db.Users.Add(user1);
+            db.SaveChanges();
           
             
         }

@@ -21,7 +21,9 @@
             <materialDesign:PackIcon Kind="User" HorizontalAlignment="Center" Margin="30 -10 0 5" Height="68" Width="50" Foreground="Black" />
             <TextBlock Text="Мій Профіль" FontSize="44" />
 
-
         </StackPanel>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Ваш псевдонім" Margin="35,82,165,268" Width="100" Height="40" FontSize="12" FontWeight="Bold"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Ваш пароль" Margin="35,102,165,248" Width="100" Height="40" FontSize="12" FontWeight="Bold"/>
+        <ListBox x:Name="ListBoxMyProfile" Grid.Column="0" Grid.Row="1" Margin="140,62,10,268" SelectionChanged="ListBoxMyProfile_SelectionChanged"/>
     </Grid>
 </Page>

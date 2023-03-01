@@ -96,7 +96,21 @@ namespace BASA2
             
         }
 
+        private void ButtonSearch_Click(object sender, RoutedEventArgs e)
+        {
 
+
+            string searchTerm = SearchBox.Text.ToLower();
+            for(int i = 0;i<Goods.Items.Count;i++)
+            {
+                string itemText = Goods.Items[i].ToString().ToLower();
+                if(itemText.Contains(searchTerm))
+                {
+                    Goods.SelectedIndex= i;
+                    break;
+                }
+            }
+        }
     }
 }
     

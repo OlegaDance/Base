@@ -23,7 +23,10 @@ namespace BASA2
         public MasterWindow()
         {
             InitializeComponent();
+
         }
+        MainWindow mainWindow = new MainWindow(); 
+        
         public bool IsDarkTheme { get; set; }
         private readonly PaletteHelper paletteHelper = new PaletteHelper();
 
