@@ -21,14 +21,24 @@ namespace BASA2
     /// </summary>
     public partial class SearchPlace : Page
     {
+
+        public delegate void RemoveItemDelegate(string item);
+
         public SearchPlace()
         {
             InitializeComponent();
 
-            Goods.Items.Clear();
+          
             ProductsContext bd = new ProductsContext();
             Goods.DataContext = bd.Products.ToList();
             Goods.ItemsSource = bd.Products.ToList();
+
+
+        }
+
+        public void RemoveItem(string item)
+        {
+            Goods.Items.Remove(item);
         }
 
         private void Goods_SelectionChanged(object sender, SelectionChangedEventArgs e)

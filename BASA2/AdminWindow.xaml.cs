@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BASA2;
+using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +24,9 @@ namespace BASA2
     {
 
         ProductsContext bd;
+        public delegate void RemoveItemDelegate(string item);
+        public event RemoveItemDelegate OrRemoveItem;
 
-       
         public AdminWindow()
         {
             InitializeComponent();
@@ -39,14 +42,16 @@ namespace BASA2
         {
             string name = ProductNameTextBox.Text;
             string sort = SortTextBox.Text;
-            string price= PriceTextBox.Text;
+            string price = PriceTextBox.Text;
             string count = ProductquantityTextBox.Text;
-           
+
 
             Product product = new Product(name, sort, price, count);
             bd.Products.Add(product);
             bd.SaveChanges();
         }
+
+
 
         private void BackToAuth_Click(object sender, RoutedEventArgs e)
         {
@@ -54,5 +59,36 @@ namespace BASA2
             mainWindow.Show();
             Hide();
         }
+
+        private void ButtonRemoveGoods_Click(object sender, RoutedEventArgs e)
+        {
+
+            SearchPlace searchPlace = new SearchPlace();
+            ListBox listBox = searchPlace.Goods;
+
+          int selectedindex = listBox.SelectedIndex;
+            if(selectedindex!=-1)
+            {
+                listBox.Items.RemoveAt(selectedindex);
+            }
+          
+            
+                var selected = searchPlace.Goods.SelectedItem as Product;
+
+               
+                if (selected != null)
+                {
+                    using (var bd= new ProductsContext())
+                    {
+                       // var selected = searchPlace.Goods.SelectedItem as Product;
+                        bd.Products.Remove(selected);
+                        bd.SaveChanges();
+                    }
+                }
+            
+           
+        }
+
     }
+    
 }
