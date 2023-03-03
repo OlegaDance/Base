@@ -22,8 +22,6 @@
             <TextBlock Text="Мій Профіль" FontSize="44" />
 
         </StackPanel>
-        <TextBlock Grid.Column="0" Grid.Row="1" Text="Ваш псевдонім" Margin="35,62,165,288" Width="100" Height="40" FontSize="12" FontWeight="Bold"/>
-        <TextBlock Grid.Column="0" Grid.Row="1" Text="Ваш пароль" Margin="35,102,165,248" Width="100" Height="40" FontSize="12" FontWeight="Bold"/>
         <TextBlock x:Name="TextBlockNameUserProfile" Grid.Column="0" Grid.Row="1" Text="" Margin="150,51,50,299" Width="100" Height="40" FontSize="12" FontWeight="Bold"/>
 
         <TextBlock x:Name="TextBlockPasswordUserProfile" Grid.Column="0" Grid.Row="1" Text="" Margin="150,102,50,248" Width="100" Height="40" FontSize="12" FontWeight="Bold"/>

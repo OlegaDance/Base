@@ -53,12 +53,12 @@
                 </Grid>
             </Grid>
         </materialDesign:Card>
-        <Frame x:Name="MyFrame" Margin="89,0,0,0">
+        <Frame x:Name="MyFrame" Margin="79,24,10,-24">
         </Frame>
-        <TextBlock x:Name="TextBlockNameProfileUser" HorizontalAlignment="Left" Margin="180,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:Name="TextBlockPasswordProfileUser" HorizontalAlignment="Left" Margin="299,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="180,227,0,0" TextWrapping="Wrap" Text="Ваш псевдонім" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="282,227,0,0" TextWrapping="Wrap" Text="Ваш пароль" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TextBlockNameProfileUser" Width="80" HorizontalAlignment="Left" Margin="193,586,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <TextBlock x:Name="TextBlockPasswordProfileUser" Width="80" HorizontalAlignment="Left" Margin="315,586,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="193,562,0,0" TextWrapping="Wrap" Text="Ваш псевдонім" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="322,565,0,0" TextWrapping="Wrap" Text="Ваш пароль" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

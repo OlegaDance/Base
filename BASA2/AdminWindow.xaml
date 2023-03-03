@@ -34,11 +34,10 @@
         <TextBlock Text="Сорт:" Grid.Row="3" Grid.Column="0" Margin="5,5,5,5"/>
         <TextBox x:Name="SortTextBox" Grid.Row="3" Grid.Column="1" Margin="5,5,5,5" Grid.ColumnSpan="3"/>
 
-        <Button Content="Додати товар" Grid.Row="4" Grid.Column="3" Margin="89,5,428,5" Click="AddToCart_Click" Width="150"/>
-        <Button x:Name="ButtonRemoveGoods" Content="Видалити товар" Grid.Row="4" Grid.Column="3" Margin="289,5,228,5" Click="ButtonRemoveGoods_Click" Width="150"/>
-        <Button Content="Вернутись до авторизації" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,13,10,115" Click="BackToAuth_Click"/>
-        <ScrollViewer Margin="0,0,0,-250" Grid.Column="4" Grid.Row="6">
-            <ListBox x:Name="ListBoxZamovlenna"  Height="184" Margin="0,0,0,-250"/>
+        <Button Content="Додати товар" Grid.Row="4" Margin="136,5,192,5" Click="AddToCart_Click" Grid.Column="3"/>
+        <Button Content="Вернутись до авторизації" Grid.Row="5" Grid.Column="3" Margin="136,13,192,115" Click="BackToAuth_Click"/>
+        <ScrollViewer Margin="0,50,0,-250" Grid.Column="4" Grid.Row="6">
+            <ListBox x:Name="ListBoxZamovlenna"  Height="551" Margin="0,50,0,-250"/>
         </ScrollViewer>
     </Grid>
 </Window>

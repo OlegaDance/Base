@@ -41,5 +41,14 @@ namespace BASA2
                 MessageBox.Show("Упс!!!");
             }
         }
+
+        private void AuthUserBack_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Hide();
+
+        }
     }
 }

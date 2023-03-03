@@ -60,34 +60,7 @@ namespace BASA2
             Hide();
         }
 
-        private void ButtonRemoveGoods_Click(object sender, RoutedEventArgs e)
-        {
-
-          //  SearchPlace searchPlace = new SearchPlace();
-          //  ListBox listBox = searchPlace.Goods;
-
-          //int selectedindex = listBox.SelectedIndex;
-          //  if(selectedindex!=-1)
-          //  {
-          //      listBox.Items.RemoveAt(selectedindex);
-          //  }
-          
-            
-          //      var selected = searchPlace.Goods.SelectedItem as Product;
-
-               
-          //      if (selected != null)
-          //      {
-          //          using (var bd= new ProductsContext())
-          //          {
-          //             // var selected = searchPlace.Goods.SelectedItem as Product;
-          //              bd.Products.Remove(selected);
-          //              bd.SaveChanges();
-          //          }
-          //      }
-            
-           
-        }
+        
 
     }
     
