@@ -74,7 +74,7 @@ namespace BASA2
 
         private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            //Application.Current.Shutdown();
 
         }
 
