@@ -178,9 +178,7 @@
     <None Include="Data Base\Basa.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Data Base\Basa2.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="Data Base\Basa2_2.db" />
     <None Include="Data Base\Orders.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
