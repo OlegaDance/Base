@@ -214,3 +214,4 @@ C:\Users\vovab\Base\BASA2\obj\Debug\Loading.g.cs
 C:\Users\vovab\Base\BASA2\obj\Debug\OrderGoods.g.cs
 C:\Users\vovab\Base\BASA2\obj\Debug\OrderGoods.baml
 C:\Users\vovab\Base\BASA2\bin\Debug\Data Base\Orders.db
+C:\Users\vovab\Base\BASA2\bin\Debug\Data Base\Products.db

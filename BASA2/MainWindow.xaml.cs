@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BASA2
 {
@@ -23,11 +25,17 @@ namespace BASA2
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        
         public MainWindow()
         {
             InitializeComponent();
-         
+          
+
         }
+
+      
+      
         public bool IsDarkTheme { get; set; }
         public static System.Windows.Media.Color ControlLightColor { get; }
         private readonly PaletteHelper paletteHelper = new PaletteHelper();
@@ -75,12 +83,13 @@ namespace BASA2
             base.OnMouseLeftButtonDown(e);
             DragMove();
         }
+       
+
 
         private void Button_Login_Click(object sender, RoutedEventArgs e)
         {
             string name = TextBoxNameUser.Text;
             string password = TexTBoxPassword.Password;
-
 
            
 
@@ -104,7 +113,7 @@ namespace BASA2
 
 
                 User AuthUser = null;
-               
+              
 
                 using (AppContext db = new AppContext())
                 {
@@ -113,33 +122,24 @@ namespace BASA2
               
                 if (AuthUser != null)
                 {
-
+                     
+                    
                     MasterWindow masterWindow = new MasterWindow();
                     masterWindow.Show();
                     Hide();
 
-
                     
-
-                }
+                      }
                
                 else
                 {
                     MessageBox.Show("Щось пішло не так!");
                 }
 
-             
 
-
-
-
-
-
-
-
-            }
+    }
         }
-
+       
         private void Button_add_new_account_Click(object sender, RoutedEventArgs e)
         {
             RegisterWindow registerWindow = new RegisterWindow();
@@ -154,10 +154,19 @@ namespace BASA2
             Hide();
 
         }
-
-        private void TextBoxNameUser_TextChanged(object sender, TextChangedEventArgs e)
+       
+        public void TextBoxNameUser_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+            MyProfile myProfile = new MyProfile();
+            myProfile.TextBlockNameUserProfile.Text = TextBoxNameUser.Text;
+
+            //MasterWindow masterWindow = new MasterWindow();
+            //masterWindow.TextBlockNameProfileUser.Text = TextBoxNameUser.Text;
+
+
         }
+
+      
     }
 }

@@ -17,7 +17,8 @@ namespace BASA2
     internal class ProductsContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
-        public ProductsContext() : base("ProductsConnection") { }
+
+        public ProductsContext() : base("ProductConnection") { }
 
     }
 

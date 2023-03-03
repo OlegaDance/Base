@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace BASA2
 {
@@ -22,7 +23,7 @@ namespace BASA2
     public partial class SearchPlace : Page
     {
 
-        public delegate void RemoveItemDelegate(string item);
+       // public delegate void RemoveItemDelegate(string item);
 
         public SearchPlace()
         {
@@ -30,6 +31,9 @@ namespace BASA2
 
           
             ProductsContext bd = new ProductsContext();
+
+           // bd.Database.CreateIfNotExists();
+
             Goods.DataContext = bd.Products.ToList();
             Goods.ItemsSource = bd.Products.ToList();
 

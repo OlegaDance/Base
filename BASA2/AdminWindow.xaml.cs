@@ -25,7 +25,7 @@ namespace BASA2
 
         ProductsContext bd;
         public delegate void RemoveItemDelegate(string item);
-        public event RemoveItemDelegate OrRemoveItem;
+
 
         public AdminWindow()
         {
@@ -63,28 +63,28 @@ namespace BASA2
         private void ButtonRemoveGoods_Click(object sender, RoutedEventArgs e)
         {
 
-            SearchPlace searchPlace = new SearchPlace();
-            ListBox listBox = searchPlace.Goods;
+          //  SearchPlace searchPlace = new SearchPlace();
+          //  ListBox listBox = searchPlace.Goods;
 
-          int selectedindex = listBox.SelectedIndex;
-            if(selectedindex!=-1)
-            {
-                listBox.Items.RemoveAt(selectedindex);
-            }
+          //int selectedindex = listBox.SelectedIndex;
+          //  if(selectedindex!=-1)
+          //  {
+          //      listBox.Items.RemoveAt(selectedindex);
+          //  }
           
             
-                var selected = searchPlace.Goods.SelectedItem as Product;
+          //      var selected = searchPlace.Goods.SelectedItem as Product;
 
                
-                if (selected != null)
-                {
-                    using (var bd= new ProductsContext())
-                    {
-                       // var selected = searchPlace.Goods.SelectedItem as Product;
-                        bd.Products.Remove(selected);
-                        bd.SaveChanges();
-                    }
-                }
+          //      if (selected != null)
+          //      {
+          //          using (var bd= new ProductsContext())
+          //          {
+          //             // var selected = searchPlace.Goods.SelectedItem as Product;
+          //              bd.Products.Remove(selected);
+          //              bd.SaveChanges();
+          //          }
+          //      }
             
            
         }

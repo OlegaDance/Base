@@ -55,6 +55,7 @@
         </materialDesign:Card>
         <Frame x:Name="MyFrame" Margin="89,0,0,0">
         </Frame>
-       
+        <TextBlock x:Name="TextBlockNameProfileUser" HorizontalAlignment="Left" Margin="10,446,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

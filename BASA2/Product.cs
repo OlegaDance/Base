@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
+
 namespace BASA2
 {
     internal class Product
     {
+
         [Key] public int id { get; set; }
         [Key]
         public string name;
@@ -41,16 +41,14 @@ namespace BASA2
         public Product() { }
         public Product(string name, string sort, string price, string count)
         {
-            this.name= name;
-            this.sort= sort;
-            this.price= price;
-            this.count= count;
+            this.name = name;
+            this.sort = sort;
+            this.price = price;
+            this.count = count;
         }
         public override string ToString()
         {
             return $" {name}   {sort}   {price}   {count}";
         }
-
-
     }
 }

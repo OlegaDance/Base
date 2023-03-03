@@ -25,7 +25,7 @@ namespace BASA2
             InitializeComponent();
 
         }
-        MainWindow mainWindow = new MainWindow(); 
+       // MainWindow mainWindow = new MainWindow(); 
         
         public bool IsDarkTheme { get; set; }
         private readonly PaletteHelper paletteHelper = new PaletteHelper();
@@ -53,8 +53,10 @@ namespace BASA2
             }
             paletteHelper.SetTheme(theme);
         }
-        private void myprofileTxT_Click(object sender, RoutedEventArgs e)
+        public void myprofileTxT_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = new MainWindow();
+           
             MyFrame.Content = new MyProfile();
         }
         private void Button_Click_searchplace(object sender, RoutedEventArgs e)

@@ -39,8 +39,8 @@
                         <TextBlock  x:Name="Textmain" Margin="70 40 0 0" FontSize="17" FontWeight="SemiBold" HorizontalAlignment="Center" Text="Увійдіть до наявного облікового запису"/>
                     </Label>
                     <Label x:Name="LabelName1">
-                        <TextBox BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="70 50 0 0" x:Name="TextBoxNameUser" Width="300" FontSize="18"
-                         materialDesign:HintAssist.Hint="Введіть псевдонім"
+                        <TextBox BorderThickness="2"  BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="70 50 0 0" x:Name="TextBoxNameUser" Width="300" FontSize="18" 
+                         materialDesign:HintAssist.Hint="Введіть псевдонім" 
                          Style="{StaticResource MaterialDesignOutlinedTextBox}" TextChanged="TextBoxNameUser_TextChanged" />
                     </Label>
                     <Label x:Name="LabelName2">
