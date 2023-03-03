@@ -55,9 +55,9 @@ namespace BASA2
         }
         public void myprofileTxT_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
            
             MyFrame.Content = new MyProfile();
+            
         }
         private void Button_Click_searchplace(object sender, RoutedEventArgs e)
         {

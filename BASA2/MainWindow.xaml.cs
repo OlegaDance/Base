@@ -7,6 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Automation.Peers;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
@@ -125,6 +126,11 @@ namespace BASA2
                      
                     
                     MasterWindow masterWindow = new MasterWindow();
+                  
+                    
+
+                    masterWindow.TextBlockNameProfileUser.Text = TextBoxNameUser.Text;
+                    masterWindow.TextBlockPasswordProfileUser.Text = TexTBoxPassword.Password.ToString();
                     masterWindow.Show();
                     Hide();
 
@@ -157,13 +163,6 @@ namespace BASA2
        
         public void TextBoxNameUser_TextChanged(object sender, TextChangedEventArgs e)
         {
-
-            MyProfile myProfile = new MyProfile();
-            myProfile.TextBlockNameUserProfile.Text = TextBoxNameUser.Text;
-
-            //MasterWindow masterWindow = new MasterWindow();
-            //masterWindow.TextBlockNameProfileUser.Text = TextBoxNameUser.Text;
-
 
         }
 
