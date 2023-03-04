@@ -60,8 +60,7 @@ namespace BASA2
             Hide();
         }
 
-        
-
+       
     }
     
 }

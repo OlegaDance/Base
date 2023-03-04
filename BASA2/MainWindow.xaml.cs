@@ -73,11 +73,7 @@ namespace BASA2
             paletteHelper.SetTheme(theme);
         }
 
-        private void btn_exit_Click(object sender, RoutedEventArgs e)
-        {
-            //Application.Current.Shutdown();
-
-        }
+       
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
         {

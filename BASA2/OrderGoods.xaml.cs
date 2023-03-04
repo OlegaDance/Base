@@ -41,9 +41,9 @@ namespace BASA2
 
 
 
-        private void ConfirmEnter_Click(object sender, RoutedEventArgs e)
+       
+        private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-
             SearchPlace searchPlace = new SearchPlace();
 
             AdminWindow adminWindow = new AdminWindow();
@@ -60,31 +60,21 @@ namespace BASA2
             string Count = searchPlace.TextBoxCountEnter.Text;
 
 
-            //if (CheckBoxPay.IsChecked == true)
-            //{
-            //    adminWindow.ListBoxZamovlenna.Items.Add("Оплата при отриманні");
-            //}
-            //if (CheckBoxSelfPickup.IsChecked==true)
-            //{
-            //    adminWindow.ListBoxZamovlenna.Items.Add("Самовивіз");
-            //}
-            //if(CheckBoxdelivery.IsChecked==true)
-            //{
-            //    adminWindow.ListBoxZamovlenna.Items.Add("Доставка кур'єром");
-            //}
 
             Order zamovlenna = new Order(SurnameUser, NameUser, NumberPhoneUser, CityUser, StreetUser, Goods, Count);
             BD.Orders.Add(zamovlenna);
             BD.SaveChanges();
 
 
-        }
+            if(PickupOption.IsChecked==true)
+            {
+                ListBoxItem item = new ListBoxItem();
+                item.Content = PickupOption.Content;
+                adminWindow.ListBoxPickUpOption.Items.Add(item);
+            }
+            
 
-
-
-      
-
-        
+         }
     }
 
 

@@ -34,10 +34,15 @@
         <TextBlock Text="Сорт:" Grid.Row="3" Grid.Column="0" Margin="5,5,5,5"/>
         <TextBox x:Name="SortTextBox" Grid.Row="3" Grid.Column="1" Margin="5,5,5,5" Grid.ColumnSpan="3"/>
 
-        <Button Content="Додати товар" Grid.Row="4" Margin="136,5,192,5" Click="AddToCart_Click" Grid.Column="3"/>
-        <Button Content="Вернутись до авторизації" Grid.Row="5" Grid.Column="3" Margin="136,13,192,115" Click="BackToAuth_Click"/>
-        <ScrollViewer Margin="0,50,0,-250" Grid.Column="4" Grid.Row="6">
-            <ListBox x:Name="ListBoxZamovlenna"  Height="551" Margin="0,50,0,-250"/>
+        <Button Content="Додати товар" Grid.Row="4" Margin="27,5,251,5" Click="AddToCart_Click"/>
+        <Button Content="Вернутись до авторизації" Grid.Row="5" Margin="46,16,253,2" Click="BackToAuth_Click" RenderTransformOrigin="0.5,0.5">
+           
+        </Button>
+        <ScrollViewer Margin="0,0,0,-300" Grid.Column="4" Grid.Row="6" HorizontalAlignment="Left">
+            <ListBox x:Name="ListBoxZamovlenna"  Height="550" Margin="0,50,0,-250" Width="316"/>
+        </ScrollViewer>
+        <ScrollViewer HorizontalAlignment="Right" Margin="0,80,748,-208" Grid.Row="5" Width="279" >
+            <ListBox x:Name="ListBoxPickUpOption" Height="580"  Margin="0,95,505,-515" Grid.Row="5" Grid.ColumnSpan="4"/>
         </ScrollViewer>
     </Grid>
 </Window>
