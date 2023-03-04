@@ -53,20 +53,19 @@ namespace BASA2
             }
             paletteHelper.SetTheme(theme);
         }
-        public void myprofileTxT_Click(object sender, RoutedEventArgs e)
-        {
-           
-            MyFrame.Content = new MyProfile();
-            
-        }
+       
         private void Button_Click_searchplace(object sender, RoutedEventArgs e)
         {
             MyFrame.Content = new SearchPlace();
         }
       
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+       
+        private void Auth_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow= new MainWindow();
+            mainWindow.Show();
+            Hide();
 
         }
     }

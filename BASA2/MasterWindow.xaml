@@ -41,9 +41,9 @@
                        
                         <ListViewItem HorizontalAlignment="Left" Margin="0 ">
                             <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
-                                    HorizontalAlignment="Left" Click="myprofileTxT_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="MyProfile">
+                                    HorizontalAlignment="Left" Click="Auth_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="MyProfile">
                                 <StackPanel Margin="-5">
-                                    <materialDesign:PackIcon Kind="User"/>
+                                    <materialDesign:PackIcon Kind="ExitRun"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BASA2"
         mc:Ignorable="d"
-        Title="AdminWindow" Height="450" Width="800">
+        Title="AdminWindow" Height="800" Width="650">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -14,12 +14,17 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" MinWidth="85.603"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="45*"/>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="667*"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
         <TextBlock Text="Назва товару:" Grid.Row="0" Grid.Column="0" Margin="5,5,5,5"/>
@@ -33,16 +38,20 @@
 
         <TextBlock Text="Сорт:" Grid.Row="3" Grid.Column="0" Margin="5,5,5,5"/>
         <TextBox x:Name="SortTextBox" Grid.Row="3" Grid.Column="1" Margin="5,5,5,5" Grid.ColumnSpan="3"/>
+        <StackPanel Grid.Row="8" Grid.ColumnSpan="4">
+            <Button Content="Додати товар" Click="AddToCart_Click"/>
+            <Button Content="Вернутись до авторизації" Click="BackToAuth_Click" RenderTransformOrigin="0.5,0.5"/>
+        </StackPanel>
 
-        <Button Content="Додати товар" Grid.Row="4" Margin="27,5,251,5" Click="AddToCart_Click"/>
-        <Button Content="Вернутись до авторизації" Grid.Row="5" Margin="46,16,253,2" Click="BackToAuth_Click" RenderTransformOrigin="0.5,0.5">
-           
-        </Button>
-        <ScrollViewer Margin="0,0,0,-300" Grid.Column="4" Grid.Row="6" HorizontalAlignment="Left">
-            <ListBox x:Name="ListBoxZamovlenna"  Height="550" Margin="0,50,0,-250" Width="316"/>
-        </ScrollViewer>
-        <ScrollViewer HorizontalAlignment="Right" Margin="0,80,748,-208" Grid.Row="5" Width="279" >
-            <ListBox x:Name="ListBoxPickUpOption" Height="580"  Margin="0,95,505,-515" Grid.Row="5" Grid.ColumnSpan="4"/>
-        </ScrollViewer>
+        <StackPanel  Grid.Row="8" Orientation="Horizontal" Margin="-5,67,5,-47" Width="800" Grid.ColumnSpan="4">
+            <ScrollViewer  HorizontalAlignment="Left"  Height="300" Margin="-100 70 0 0" Width="700" >
+                <ListBox x:Name="ListBoxZamovlenna"  />
+            </ScrollViewer>
+        </StackPanel>
+        <StackPanel  Grid.Row="9" Orientation="Horizontal" Margin="-5,67,5,-47" Width="800" Grid.ColumnSpan="4">
+            <ScrollViewer HorizontalAlignment="Right"  Height="300" Margin="50" Width="700">
+                <ListBox x:Name="ListBoxPickUpOption"  />
+            </ScrollViewer>
+        </StackPanel>
     </Grid>
 </Window>
