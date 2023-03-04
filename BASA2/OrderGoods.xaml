@@ -34,7 +34,7 @@
             <StackPanel>
                 <TextBlock Text="Delivery Options" FontWeight="Bold" FontSize="20"/>
 
-                <RadioButton x:Name="PickupOption" Content="Pickup (не обов'язково вводити дані)" Margin="0 8" IsChecked="True"/>
+                <RadioButton x:Name="PickupOption" Content="Pickup (не обов'язково вводити дані)" Margin="0 8" IsChecked="True" Checked="PickupOption_Checked"/>
                 <RadioButton x:Name="DeliveryOption" Content="Delivery (обов'яязково вводити дані)" Margin="0 8"/>
 
                 <TextBox   x:Name="TextBoxSurnameUser"

@@ -48,7 +48,7 @@
                 <ListBox x:Name="ListBoxZamovlenna"  />
             </ScrollViewer>
         </StackPanel>
-        <StackPanel  Grid.Row="9" Orientation="Horizontal" Margin="-5,67,5,-47" Width="800" Grid.ColumnSpan="4">
+        <StackPanel  Grid.Row="9" Orientation="Horizontal" Margin="-5,-100,5,-47" Width="800" Grid.ColumnSpan="4">
             <ScrollViewer HorizontalAlignment="Right"  Height="300" Margin="50" Width="700">
                 <ListBox x:Name="ListBoxPickUpOption"  />
             </ScrollViewer>

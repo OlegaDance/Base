@@ -66,15 +66,21 @@ namespace BASA2
             BD.SaveChanges();
 
 
-            if(PickupOption.IsChecked==true)
-            {
-                ListBoxItem item = new ListBoxItem();
-                item.Content = PickupOption.Content;
-                adminWindow.ListBoxPickUpOption.Items.Add(item);
-            }
+          
+
             
 
          }
+
+        private void PickupOption_Checked(object sender, RoutedEventArgs e)
+        {
+
+            AdminWindow adminWindow = new AdminWindow();
+            ListBoxItem listBoxItem = new ListBoxItem();
+            listBoxItem.Content = (sender as RadioButton).Content;
+            adminWindow.ListBoxPickUpOption.Items.Add(listBoxItem);
+
+        }
     }
 
 
