@@ -160,7 +160,6 @@ C:\Users\vovab\Base\BASA2\bin\Debug\Data Base\Basa.db
 C:\Users\vovab\Base\BASA2\obj\Debug\AuthWinwowAdmin.g.cs
 C:\Users\vovab\Base\BASA2\obj\Debug\AuthWinwowAdmin.baml
 C:\Users\MrKyg\Base\BASA2\bin\Debug\Data Base\Basa.db
-C:\Users\MrKyg\Base\BASA2\bin\Debug\Data Base\Basa2.db
 C:\Users\MrKyg\Base\BASA2\bin\Debug\BASA2.exe.config
 C:\Users\MrKyg\Base\BASA2\bin\Debug\BASA2.exe
 C:\Users\MrKyg\Base\BASA2\bin\Debug\BASA2.pdb
@@ -215,3 +214,7 @@ C:\Users\vovab\Base\BASA2\obj\Debug\OrderGoods.g.cs
 C:\Users\vovab\Base\BASA2\obj\Debug\OrderGoods.baml
 C:\Users\vovab\Base\BASA2\bin\Debug\Data Base\Orders.db
 C:\Users\vovab\Base\BASA2\bin\Debug\Data Base\Products.db
+C:\Users\MrKyg\Base\BASA2\bin\Debug\Data Base\Orders.db
+C:\Users\MrKyg\Base\BASA2\bin\Debug\Data Base\Products.db
+C:\Users\MrKyg\Base\BASA2\obj\Debug\OrderGoods.g.cs
+C:\Users\MrKyg\Base\BASA2\obj\Debug\OrderGoods.baml

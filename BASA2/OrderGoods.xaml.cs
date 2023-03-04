@@ -27,8 +27,8 @@ namespace BASA2
         public OrderGoods()
         {
             InitializeComponent();
-           BD = new OrderContext();
-        
+            BD = new OrderContext();
+
 
         }
 
@@ -36,10 +36,10 @@ namespace BASA2
         {
             GoodsTextBlock.Text = text;
 
-            
+
         }
 
-       
+
 
         private void ConfirmEnter_Click(object sender, RoutedEventArgs e)
         {
@@ -57,7 +57,7 @@ namespace BASA2
             string CityUser = TextBoxCityUser.Text;
             string StreetUser = TextBoxStreetUser.Text;
             string Goods = GoodsTextBlock.Text;
-           string Count = searchPlace.TextBoxCountEnter.Text;
+            string Count = searchPlace.TextBoxCountEnter.Text;
 
 
             //if (CheckBoxPay.IsChecked == true)
@@ -72,31 +72,20 @@ namespace BASA2
             //{
             //    adminWindow.ListBoxZamovlenna.Items.Add("Доставка кур'єром");
             //}
- 
-             Order zamovlenna = new Order(SurnameUser, NameUser, NumberPhoneUser, CityUser, StreetUser, Goods, Count);
+
+            Order zamovlenna = new Order(SurnameUser, NameUser, NumberPhoneUser, CityUser, StreetUser, Goods, Count);
             BD.Orders.Add(zamovlenna);
             BD.SaveChanges();
 
 
         }
 
-       
 
-        private void CheckBoxPay_Checked_1(object sender, RoutedEventArgs e)
-        {
 
-        }
+      
 
-        private void CheckBoxdelivery_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBoxSelfPickup_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
-   
+
 
 }

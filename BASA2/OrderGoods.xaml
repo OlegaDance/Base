@@ -4,34 +4,58 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BASA2"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="BASA2.OrderGoods"
-        mc:Ignorable="d"
-        Title="OrderGoods" Height="600" Width="900" WindowStyle="ToolWindow">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Order" Height="750" Width="600"
+        >
     <Grid>
-        <TextBlock x:Name="GoodsTextBlock" HorizontalAlignment="Left" Margin="55,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        
-        <TextBlock x:Name="FormulaTextBlockCountAndPrice" HorizontalAlignment="Left" Margin="55,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-       
-        <CheckBox x:Name="CheckBoxPay" Content="Оплата при отриманні" HorizontalAlignment="Left" Margin="267,121,0,0" VerticalAlignment="Top" Checked="CheckBoxPay_Checked_1" />
-        <CheckBox x:Name="CheckBoxdelivery" Content="Доставка кур'єром" HorizontalAlignment="Left" Margin="675,124,0,0" VerticalAlignment="Top" Checked="CheckBoxdelivery_Checked"/>
-        <CheckBox x:Name="CheckBoxSelfPickup" Content="Самовивіз" HorizontalAlignment="Left" Margin="502,124,0,0" VerticalAlignment="Top" Checked="CheckBoxSelfPickup_Checked"  />
-           
-        <TextBox  Margin="675,179,75,330" x:Name="TextBoxSurnameUser" FontSize="12" Width="150" Height="65"
-        materialDesign:HintAssist.Hint="Введіть прізвище"
-         />
-        <TextBox  Margin="675,259,75,250" x:Name="TextBoxNameUser" FontSize="12" Width="150" Height="65"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <materialDesign:Card Margin="16" Padding="16" Grid.Row="0">
+            <StackPanel>
+                <TextBlock Text="Order Details" FontWeight="Bold" FontSize="24"/>
+            </StackPanel>
+        </materialDesign:Card>
+
+        <!-- Інформація про товар -->
+        <materialDesign:Card Margin="16,16,16,16" Padding="16" Grid.Row="1">
+            <StackPanel>
+                <TextBlock x:Name="GoodsTextBlock" Text="Product Name: Lorem ipsum" FontWeight="Bold" FontSize="20"/>
+                <TextBlock x:Name="FormulaTextBlockCountAndPrice" Text="Price: $9.99" Margin="0 8"/>
+            </StackPanel>
+        </materialDesign:Card>
+
+        <!-- Вибір між самовивозом та доставкою -->
+        <materialDesign:Card Margin="16" Padding="16" Grid.Row="2">
+            <StackPanel>
+                <TextBlock Text="Delivery Options" FontWeight="Bold" FontSize="20"/>
+
+                <RadioButton x:Name="PickupOption" Content="Pickup" Margin="0 8" IsChecked="True"/>
+                <RadioButton x:Name="DeliveryOption" Content="Delivery" Margin="0 8"/>
+
+                <TextBox   x:Name="TextBoxSurnameUser"
+        materialDesign:HintAssist.Hint="Введіть прізвище"/>
+
+                <TextBox   x:Name="TextBoxNameUser" 
             materialDesign:HintAssist.Hint="Введіть ім'я"
            />
-        <TextBox  Margin="675,339,75,170" x:Name="TextBoxNumberPhoneUser" FontSize="12" Width="150" Height="65"
+                <TextBox   x:Name="TextBoxNumberPhoneUser" 
             materialDesign:HintAssist.Hint="Введіть номер телефону"
              />
-        <TextBox  Margin="675,419,75,90" x:Name="TextBoxCityUser" FontSize="12" Width="150" Height="65"
+                <TextBox   x:Name="TextBoxCityUser"
             materialDesign:HintAssist.Hint="Введіть місто"
               />
-        <TextBox Margin="675,499,75,10" x:Name="TextBoxStreetUser" FontSize="12" Width="150" Height="65"
-            materialDesign:HintAssist.Hint="Введіть №буд.та вул."
-            />
-        <Button x:Name="ConfirmEnter" Content="Підтвердити" HorizontalAlignment="Center" Margin="0,504,0,0" VerticalAlignment="Top" Click="ConfirmEnter_Click"/>
+                <TextBox x:Name="TextBoxStreetUser" 
+            materialDesign:HintAssist.Hint="Введіть №буд.та вул."/>
+                <Button x:Name="ConfirmButton" Content="Confirm"  Padding="16" Grid.Row="3" HorizontalAlignment="Right" />
+            </StackPanel>
+        </materialDesign:Card>
+
+       
 
     </Grid>
 </Window>
