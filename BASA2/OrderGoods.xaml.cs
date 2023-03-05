@@ -22,35 +22,20 @@ namespace BASA2
     /// </summary>
     public partial class OrderGoods : Window
     {
-
         OrderContext BD;
         public OrderGoods()
         {
             InitializeComponent();
             BD = new OrderContext();
-
-
         }
-
         internal void SetText(string text)
         {
             GoodsTextBlock.Text = text;
-
-
         }
-
-
-
-       
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
             SearchPlace searchPlace = new SearchPlace();
-
             AdminWindow adminWindow = new AdminWindow();
-
-
-
-
             string SurnameUser = TextBoxSurnameUser.Text;
             string NameUser = TextBoxNameUser.Text;
             string NumberPhoneUser = TextBoxNumberPhoneUser.Text;
@@ -58,28 +43,16 @@ namespace BASA2
             string StreetUser = TextBoxStreetUser.Text;
             string Goods = GoodsTextBlock.Text;
             string Count = searchPlace.TextBoxCountEnter.Text;
-
-
-
             Order zamovlenna = new Order(SurnameUser, NameUser, NumberPhoneUser, CityUser, StreetUser, Goods, Count);
             BD.Orders.Add(zamovlenna);
             BD.SaveChanges();
-
-
-          
-
-            
-
          }
-
         private void PickupOption_Checked(object sender, RoutedEventArgs e)
         {
-
             AdminWindow adminWindow = new AdminWindow();
             ListBoxItem listBoxItem = new ListBoxItem();
             listBoxItem.Content = (sender as RadioButton).Content;
             adminWindow.ListBoxPickUpOption.Items.Add(listBoxItem);
-
         }
     }
 

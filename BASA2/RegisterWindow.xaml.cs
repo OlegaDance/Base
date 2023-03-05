@@ -21,20 +21,15 @@ namespace BASA2
     /// Логика взаимодействия для RegisterWindow.xaml
     /// </summary>
     public partial class RegisterWindow : Window
-    {
-
+    { 
         AppContext db;
-        
         public RegisterWindow()
         {
             InitializeComponent();
-
             db = new AppContext();
-           
         }
         public bool IsDarkTheme { get; set; }
         private readonly PaletteHelper paletteHelper = new PaletteHelper();
-
         private void ThemToogle_Click(object sender, RoutedEventArgs e)
         {
             ITheme theme = paletteHelper.GetTheme();
@@ -48,7 +43,6 @@ namespace BASA2
                 LabelName3.Foreground = Brushes.Black;
                 LabelName4.Foreground = Brushes.Black;
                 LabelName5.Foreground = Brushes.Black;
-
             }
             else
             {
@@ -67,7 +61,6 @@ namespace BASA2
         private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
@@ -77,7 +70,6 @@ namespace BASA2
         }
         private void Button_Enter_Auth_Account_Click(object sender, RoutedEventArgs e)
         {
-
             MainWindow authWindow = new MainWindow();
             authWindow.Show();
             Hide();
@@ -85,12 +77,8 @@ namespace BASA2
 
         private void Button_Register_Click(object sender, RoutedEventArgs e)
         {
-
             string name = TextBoxUserName.Text;
             string password = TextBoxPassword.Password;
-
-            
-
             if (name.Length < 4)
             {
                 TextBoxUserName.ToolTip = "Мінімум 4 символи";
@@ -101,7 +89,6 @@ namespace BASA2
                 TextBoxPassword.ToolTip = "Мінімум 6 символів";
                 TextBoxPassword.Background = Brushes.IndianRed;
             } 
-            
             else 
             {
                 TextBoxUserName.ToolTip = "";
@@ -113,7 +100,6 @@ namespace BASA2
                 User user = new User(name, password);
                 db.Users.Add(user);
                 db.SaveChanges();
-
             MainWindow authWindow = new MainWindow();
                 authWindow.Show();
                 Hide();
@@ -121,8 +107,6 @@ namespace BASA2
             User user1 = new User(name, password);
             user1 = db.Users.Add(user1);
             db.SaveChanges();
-          
-            
         }
     }
 }

@@ -23,28 +23,23 @@ namespace BASA2
         {
             InitializeComponent();
         }
-
         private void Button_Login_Click(object sender, RoutedEventArgs e)
         {
             string namee = TextBoxNameUser.Text;
             string passwordd = TexTBoxPassword.Password;
-
             if (namee=="Admin"&& passwordd == "111111")
             {
                 AdminWindow adminWindow = new AdminWindow();
                 adminWindow.Show();
                 Hide();
-
             }
             else
             {
                 MessageBox.Show("Упс!!!");
             }
         }
-
         private void AuthUserBack_Click(object sender, RoutedEventArgs e)
         {
-
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             Hide();

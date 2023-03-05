@@ -22,16 +22,12 @@ namespace BASA2
     /// </summary>
     public partial class AdminWindow : Window
     {
-
         ProductsContext bd;
         public delegate void RemoveItemDelegate(string item);
-
-
         public AdminWindow()
         {
             InitializeComponent();
             bd = new ProductsContext();
-
             ListBoxZamovlenna.Items.Clear();
             OrderContext BD = new OrderContext();
             ListBoxZamovlenna.DataContext = BD.Orders.ToList();
@@ -44,15 +40,10 @@ namespace BASA2
             string sort = SortTextBox.Text;
             string price = PriceTextBox.Text;
             string count = ProductquantityTextBox.Text;
-
-
             Product product = new Product(name, sort, price, count);
             bd.Products.Add(product);
             bd.SaveChanges();
         }
-
-
-
         private void BackToAuth_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();

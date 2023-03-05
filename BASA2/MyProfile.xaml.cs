@@ -23,17 +23,7 @@ namespace BASA2
     {
         public MyProfile()
         {
-           
-            
-
             InitializeComponent();
-          
-
         }
-
-     
-
-
-
     }
 }

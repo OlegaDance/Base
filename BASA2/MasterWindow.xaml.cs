@@ -25,31 +25,20 @@ namespace BASA2
             InitializeComponent();
 
         }
-       // MainWindow mainWindow = new MainWindow(); 
-        
         public bool IsDarkTheme { get; set; }
         private readonly PaletteHelper paletteHelper = new PaletteHelper();
-
-
         private void ThemToogle_Click(object sender, RoutedEventArgs e)
         {
-
-
             ITheme theme = paletteHelper.GetTheme();
             if (IsDarkTheme = theme.GetBaseTheme() == BaseTheme.Dark)
             {
                 IsDarkTheme = false;
                 theme.SetBaseTheme(Theme.Light);
-
-
             }
             else
             {
                 IsDarkTheme = true;
                 theme.SetBaseTheme(Theme.Dark);
-
-
-
             }
             paletteHelper.SetTheme(theme);
         }
@@ -58,15 +47,11 @@ namespace BASA2
         {
             MyFrame.Content = new SearchPlace();
         }
-      
-
-       
         private void Auth_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow= new MainWindow();
             mainWindow.Show();
             Hide();
-
         }
     }
 }

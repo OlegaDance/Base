@@ -58,9 +58,7 @@ namespace BASA2
             get { return count; }
             set { count = value; }
         }
-
         public Order() { }
-
         public Order(  string surname,
          string name,
          string numberphone,
@@ -77,8 +75,6 @@ namespace BASA2
             this.street= street;
             this.goods= goods;
             this.count= count;
-
-
         }
         public override string ToString()
         {
