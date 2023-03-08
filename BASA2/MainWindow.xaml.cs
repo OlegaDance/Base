@@ -99,7 +99,7 @@ namespace BASA2
                 }
                 else
                 {
-                    MessageBox.Show("Щось пішло не так!");
+                    MessageBox.Show("Введено не коректно логін або парль!");
                 }
     }
         }
